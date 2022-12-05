@@ -23,7 +23,8 @@ members = [
   "nrf52840-hal",
 #  "nrf52840-hal-tests",
 #  "nrf9160-hal",
-  "blinky"
+  "blinky",
+  "adafruit-circuit-playground-bluefruit"
 ]
 exclude = ["examples"]
 

@@ -1,0 +1,19 @@
+[package]
+name = "adafruit-circuit-playground-bluefruit"
+version = "0.1.0"
+authors = ["Alexander McNurlan", "Andres O. Vela"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+cortex-m = "0.7.3"
+cortex-m-rt = "0.7.0"
+# rtt-target = { version = "0.3.1", features = ["cortex-m"] }
+nrf52840-hal = { path = "../nrf52840-hal" }
+nb = "~1.0"
+panic-halt = "0.2.0"
+
+[dependencies.embedded-hal]
+version = "0.2.3"
+features = ["unproven"]

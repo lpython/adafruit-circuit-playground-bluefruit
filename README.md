@@ -1,19 +1,12 @@
-# Blinky button demo
+```bash
 
-This hello world example turns on LED 1 when you press Button 1 on the nrf52-dk (PCA10040).
-> Note: You will have to change the pin numbers if you use a different device.
+cargo build
 
-## Set up with `cargo-embed`
+arm-none-eabi-objcopy -O ihex ../target/thumbv7em-none-eabihf/debug/blinky-button-demo blinky.hex
+ 
+adafruit-nrfutil dfu genpkg --dev-type 0x0052 --application blinky.hex blinky-dfu-package.zip
+ 
+adafruit-nrfutil dfu serial -pkg blinky-dfu-package.zip -p /dev/tty.usbmodem124401 -b 115200
 
-Install `cargo-embed` if you don't have it already:
-
-```console
-$ cargo install cargo-embed
-```
-
-Then just `cd` to the example folder and run
-
-```console
-$ cargo embed --target thumbv7em-none-eabihf
 ```
 

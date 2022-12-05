@@ -3,6 +3,18 @@
 version = 3
 
 [[package]]
+name = "adafruit-circuit-playground-bluefruit"
+version = "0.1.0"
+dependencies = [
+ "cortex-m",
+ "cortex-m-rt",
+ "embedded-hal",
+ "nb 1.0.0",
+ "nrf52840-hal",
+ "panic-halt",
+]
+
+[[package]]
 name = "az"
 version = "1.2.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -293,6 +305,12 @@ dependencies = [
  "cortex-m",
  "vcell",
 ]
+
+[[package]]
+name = "panic-halt"
+version = "0.2.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "de96540e0ebde571dc55c73d60ef407c653844e6f9a1e2fdbd40c07b9252d812"
 
 [[package]]
 name = "proc-macro2"
